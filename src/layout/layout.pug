@@ -1,0 +1,50 @@
+include mixin
+
+doctype html
+html(lang="ru")#html
+	block head
+		head
+			meta(charset="utf-8")
+			block title
+			meta(content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport")
+			meta(content="ie=edge" http-equiv="x-ua-compatible")
+			link(rel="stylesheet" href="vendor/bootstrap.min.css")
+			link(rel="stylesheet" href="vendor/swiper-bundle.min.css")
+			link(rel="stylesheet" href="css/global.css")
+			link(rel="stylesheet" href="css/cookie.css")
+			link(rel="stylesheet" href="css/header.css")
+			link(rel="stylesheet" href="css/top-front.css")
+			link(rel="stylesheet" href="css/footer.css")
+			link(rel="stylesheet" href="css/block-catalog.css")
+			link(rel="stylesheet" href="css/advantage.css")
+			link(rel="stylesheet" href="css/projects.css")
+			link(rel="stylesheet" href="css/block-about.css")
+			link(rel="stylesheet" href="css/marketplace.css")
+			link(rel="stylesheet" href="css/why-buy.css")
+			link(rel="stylesheet" href="css/steps.css")
+			link(rel="stylesheet" href="css/consultation.css")
+			
+		
+			
+	
+			
+	body#body
+		#pagescroll
+			//- include ../components/preloader/preloader
+			include ../components/header/header
+			//- include ../components/menu/menu
+			.page.inner
+				block content
+			include ../components/footer/footer
+			include ../components/cookie/cookie
+			
+
+
+
+		block scripts
+			script(src='vendor/bootstrap.min.js')
+			script(src='vendor/aos.js')
+			script(src='vendor/swiper-bundle.min.js')
+			script(src='js/global.js')
+			script(src='js/projects.js')
+			script(src='js/cookie.js')

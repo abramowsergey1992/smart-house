@@ -1,0 +1,47 @@
+@import '../../layout/css/mixin.scss';
+
+.rs-steps{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	counter-reset: indx 0;
+	display: flex;
+	flex-direction: column;
+	gap:u(27);
+	padding-top: u(16);
+	li{
+		counter-increment: indx 1;
+		padding: u(21) ;
+		padding-left: u(108);
+		font-family: var(--font-family);
+		font-weight: 600;
+		font-size: u(21);
+		line-height: 148%;
+		text-align: left;
+		position: relative;
+		border-radius: u(53);
+		background: #fff;
+		&::before{
+			transform: translateY(-50%);
+			position: absolute;
+			top: 50%;
+			left: u(40);
+			width: u(52);
+			aspect-ratio: 1/1;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			font-family: var(--font-family);
+			font-weight: 600;
+			text-align: center;
+			border-radius: 50%;
+			font-size: u(24);
+			line-height: 148%;
+			background-color: #D7006F;
+			color: #fff;
+			content: counter(indx);
+			box-shadow: 3px 3px 17px 0 rgba(58, 55, 59, 0.15);
+		}
+	}
+}

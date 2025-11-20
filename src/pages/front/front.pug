@@ -1,0 +1,22 @@
+extends ../../layout/layout
+block title
+	title Умный дом
+block content
+	include ../../components/top-front/top-front
+	include ../../components/block-catalog/block-catalog
+	include ../../components/block-about/block-about
+	include ../../components/advantage/advantage
+	include ../../components/projects/projects
+	.block(data-aos = "fade-up")
+		.block__body
+			.rs-two-grid 
+				include ../../components/marketplace/marketplace
+				include ../../components/why-buy/why-buy
+	.block(data-aos = "fade-up")
+		.block__head 
+			.block__decor(data-x="l" data-y="t" type="1")
+			.block__decor(data-x="r" data-y="b" type="2")
+		.block__body
+			.rs-two-grid 
+				include ../../components/steps/steps
+				include ../../components/consultation/consultation

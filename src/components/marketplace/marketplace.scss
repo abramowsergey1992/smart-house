@@ -1,0 +1,29 @@
+@import '../../layout/css/mixin.scss';
+
+.rs-marketplace{
+	&__list{
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		margin-top: u(24);
+		gap: u(24);
+		flex-direction: column;
+	}
+	&__item{
+		border-radius: u(57);
+		overflow: hidden;
+		padding:u(22) u(15);
+		background: #fff;
+		display: block;
+		img{
+			height: u(30) ;
+			transition: transform 0.5s;
+		}
+		&:hover{
+			img{
+				transform: scale(1.1);
+			}
+		}
+	}
+}

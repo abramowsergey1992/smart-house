@@ -1,0 +1,22 @@
+mixin item(size,title,img)
+	.rs-block-catalog-item( data-size=size)
+		.rs-block-catalog-item__bg 
+			img(src="img/bc-bg.svg", alt="")
+		.rs-block-catalog-item__content
+			a.rs-block-catalog-item__title(href="/")= title 
+			img(src=img, alt="").rs-block-catalog-item__img
+
+.rs-block-catalog.block(data-aos = "fade-up")
+	.block__head 
+		h2 Каталог умных решений для жизни
+		.block__decor(data-x="l" data-y="t" type="1")
+		.block__decor(data-x="r" data-y="b" type="2")
+	.block__body 
+		.rs-block-catalog__grid
+			+item("small","Выключатели","img/bc-1.webp")
+			+item("small","Реле","img/bc-2.webp")
+			+item("small","Системы отопления","img/bc-3.webp")
+			+item("small","Карнизы и моторы","img/bc-4.webp")
+			+item("big","Датчики","img/bc-5.webp")
+			+item("big","Освещение","img/bc-6.webp")
+			+item("big","Розетки","img/bc-7.webp")

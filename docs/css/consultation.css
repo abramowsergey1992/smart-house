@@ -1,0 +1,14 @@
+.rs-consultation-form__submit {
+  width: 100%;
+  justify-content: center;
+  margin-top: calc(24 * var(--width-multiplier));
+}
+
+.rs-consultation-form__tg {
+  margin-top: calc(32 * var(--width-multiplier));
+  text-align: center;
+  font-weight: 700;
+  font-size: calc(16 * var(--width-multiplier));
+  line-height: 163%;
+  color: #f6f6f6;
+}

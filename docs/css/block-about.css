@@ -1,0 +1,109 @@
+.rs-block-about__top-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  margin-bottom: calc(40 * var(--width-multiplier));
+  display: grid;
+  gap: calc(40 * var(--width-multiplier));
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.rs-block-about__top-list li {
+  background: #f5f5f5;
+  padding: calc(36 * var(--width-multiplier)) calc(26 * var(--width-multiplier));
+  border-radius: calc(48 * var(--width-multiplier));
+}
+
+.rs-block-about__top-list li .h3,
+.rs-block-about__top-list li .h3 {
+  margin: 0;
+}
+
+.rs-block-about__top-list li p:last-child {
+  margin-bottom: 0;
+}
+
+.rs-block-about__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(40 * var(--width-multiplier));
+}
+
+.rs-block-about__text {
+  background: #f5f5f5;
+  padding: calc(40 * var(--width-multiplier));
+  border-radius: calc(48 * var(--width-multiplier));
+}
+
+.rs-block-about__img {
+  position: relative;
+  border-radius: calc(48 * var(--width-multiplier));
+  overflow: hidden;
+}
+
+.rs-block-about__img img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rs-block-about__quote {
+  position: relative;
+  border-radius: calc(48 * var(--width-multiplier));
+  overflow: hidden;
+  margin-top: calc(40 * var(--width-multiplier));
+  padding: calc(66 * var(--width-multiplier));
+  background-color: var(--osnovnoy);
+  color: #fff;
+  background-size: 100% 100%;
+  background-position: top;
+  background-image: url("../img/bg.webp");
+  text-align: center;
+}
+
+.rs-block-about__quote h3,
+.rs-block-about__quote .h3 {
+  max-width: calc(1280 * var(--width-multiplier));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rs-block-about__quote-name {
+  margin-top: calc(40 * var(--width-multiplier));
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: calc(32 * var(--width-multiplier));
+  line-height: 148%;
+}
+
+.rs-block-about__quote-job {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: calc(21 * var(--width-multiplier));
+  line-height: 148%;
+}
+
+@media (max-width: 900px) {
+  .rs-block-about__top-list {
+    gap: calc(20 * var(--width-multiplier));
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rs-block-about__grid {
+    gap: calc(20 * var(--width-multiplier));
+    grid-template-columns: 1fr;
+  }
+
+  .rs-block-about__quote {
+    padding: calc(40 * var(--width-multiplier));
+  }
+
+  .rs-block-about__quote h3,
+  .rs-block-about__quote .h3 {
+    text-transform: none;
+    font-size: calc(40 * var(--width-multiplier));
+  }
+}

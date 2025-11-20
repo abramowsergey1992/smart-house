@@ -1,0 +1,26 @@
+.rs-marketplace__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  margin-top: calc(24 * var(--width-multiplier));
+  gap: calc(24 * var(--width-multiplier));
+  flex-direction: column;
+}
+
+.rs-marketplace__item {
+  border-radius: calc(57 * var(--width-multiplier));
+  overflow: hidden;
+  padding: calc(22 * var(--width-multiplier)) calc(15 * var(--width-multiplier));
+  background: #fff;
+  display: block;
+}
+
+.rs-marketplace__item img {
+  height: calc(30 * var(--width-multiplier));
+  transition: transform 0.5s;
+}
+
+.rs-marketplace__item:hover img {
+  transform: scale(1.1);
+}

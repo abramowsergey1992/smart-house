@@ -1,0 +1,15 @@
+.rs-why-buy__link.btn {
+  width: 100%;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: calc(30 * var(--width-multiplier));
+  line-height: 163%;
+  padding: calc(13 * var(--width-multiplier));
+  margin: calc(52 * var(--width-multiplier)) 0 calc(63 * var(--width-multiplier));
+  text-align: center;
+  justify-content: center;
+}
+
+.rs-why-buy p {
+  font-weight: 600;
+}

@@ -1,0 +1,16 @@
+@import '../../layout/css/mixin.scss';
+.rs-consultation-form{
+	&__submit{
+		width: 100%;
+		justify-content: center;
+		margin-top: u(24);
+	}
+	&__tg{
+		margin-top: u(32);
+		text-align: center;
+font-weight: 700;
+font-size: u(16);
+line-height: 163%;
+color: #f6f6f6;
+	}
+}

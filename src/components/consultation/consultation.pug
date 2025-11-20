@@ -1,0 +1,20 @@
+.rs-card-bg
+	h3 Заявка на бесплатную<br> консультацию с экспертом
+	form.rs-consultation-form(action="/" method='POST')
+		label.input
+			input(type="text" name="name" placeholder="Имя")
+		label.input
+			input(type="text" name="phone" placeholder="Имя")
+		label.checkbox
+			input(type="checkbox" name="agree1")
+			span.checkbox__indicator 
+			span.checkbox__text Я принимаю политику <a href="/">обработки персональных данных</a> и <a href="/">даю согласие на обработку данных</a>
+		label.checkbox
+			input(type="checkbox" name="agree1")
+			span.checkbox__indicator 
+			span.checkbox__text Даю свое согласие на <a href="/">получение рекламной и информационной рассылки</a>
+		button(type="submit").btn._white.rs-consultation-form__submit Отправить 
+		.rs-consultation-form__tg Если вы не любите заполнять формы, напишите нам в 
+			a(href="/") 
+				+sprite('feedback')
+				| Telegram

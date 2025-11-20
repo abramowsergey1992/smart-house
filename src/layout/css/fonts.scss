@@ -1,0 +1,61 @@
+/* Подключение шрифтов Gosha Sans в формате TTF */
+@font-face {
+    font-family: 'Gosha Sans';
+    src: url('../fonts/GoshaSans-Ultralight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gosha Sans';
+    src: url('../fonts/GoshaSans-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gosha Sans';
+    src: url('../fonts/GoshaSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gosha Sans';
+    src: url('../fonts/GoshaSans-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gosha Sans';
+    src: url('../fonts/GoshaSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gosha Sans';
+    src: url('../fonts/GoshaSans-Ultrabold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+	font-display: swap;
+	font-family: 'Manrope';
+	src: url('../fonts/Manrope/Manrope-VariableFont_wght.ttf');
+}
+
+@font-face {
+	font-display: swap;
+	font-family: 'Onest';
+	src: url('../fonts/Onest/Onest-VariableFont_wght.ttf');
+}

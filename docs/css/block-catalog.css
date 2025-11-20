@@ -1,0 +1,102 @@
+.rs-block-catalog__grid {
+  display: grid;
+  gap: calc(40 * var(--width-multiplier));
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.rs-block-catalog-item {
+  background: #f5f5f5;
+  overflow: hidden;
+  position: relative;
+  border-radius: calc(48 * var(--width-multiplier));
+}
+
+.rs-block-catalog-item[data-size=small] {
+  grid-column: span 3;
+}
+
+.rs-block-catalog-item[data-size=big] {
+  grid-column: span 4;
+}
+
+.rs-block-catalog-item__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.rs-block-catalog-item__bg img {
+  transition: transform 0.5s;
+  height: 100%;
+  right: 0;
+  position: absolute;
+  top: 0;
+  min-width: 100%;
+  max-width: initial;
+  object-fit: cover;
+}
+
+.rs-block-catalog-item:hover .rs-block-catalog-item__bg img {
+  transform: scale(1.4);
+}
+
+.rs-block-catalog-item__content {
+  position: relative;
+}
+
+.rs-block-catalog-item__title {
+  padding: calc(30 * var(--width-multiplier)) calc(36 * var(--width-multiplier));
+  padding-bottom: 0;
+  font-family: var(--third-family);
+  font-size: calc(48 * var(--width-multiplier));
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--belyy) !important;
+  text-decoration: none !important;
+  box-sizing: border-box;
+  display: block;
+}
+
+.rs-block-catalog-item__title::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+}
+
+.rs-block-catalog-item__img {
+  height: calc(293 * var(--width-multiplier));
+  margin-left: auto;
+  display: block;
+  max-width: 100%;
+}
+
+@media (max-width: 900px) {
+  .rs-block-catalog__grid {
+    gap: calc(20 * var(--width-multiplier));
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rs-block-catalog-item[data-size=small] {
+    grid-column: span 1;
+  }
+
+  .rs-block-catalog-item[data-size=big] {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 599px) {
+  .rs-block-catalog__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rs-block-catalog-item[data-size=big] {
+    grid-column: span 1;
+  }
+}

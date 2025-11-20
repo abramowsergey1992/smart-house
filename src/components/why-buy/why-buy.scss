@@ -1,0 +1,18 @@
+@import '../../layout/css/mixin.scss';
+
+.rs-why-buy{
+	&__link.btn{
+		width: 100%;
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: u(30);
+		line-height: 163%;
+		padding: u(13);
+		margin: u(52) 0 u(63);
+		text-align: center;
+		justify-content: center;
+	}
+	p{
+		font-weight: 600;
+	}
+}

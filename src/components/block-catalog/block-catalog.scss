@@ -1,0 +1,89 @@
+@import '../../layout/css/mixin.scss';
+
+.rs-block-catalog{
+	&__grid{
+		display: grid;
+		gap: u(40);
+		grid-template-columns: repeat(12,1fr);
+		@include tablet{
+			gap:u(20);
+			grid-template-columns: 1fr 1fr;
+		}
+		@include mobile{
+			grid-template-columns: 1fr;
+		}
+	}
+}
+.rs-block-catalog-item{
+	background: #f5f5f5;
+	overflow: hidden;
+	position: relative;
+	@include br;
+	&[data-size="small"]{
+		grid-column: span 3;
+		@include tablet{
+			grid-column: span 1;
+		}
+	}
+	&[data-size="big"]{
+		grid-column: span 4;
+		@include tablet{
+			grid-column: span 2;
+		}
+		@include mobile{
+			grid-column: span 1;
+		}
+
+	}
+	&__bg{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		img{
+			transition: transform 0.5s;
+			.rs-block-catalog-item:hover &{
+				transform: scale(1.4);
+			}
+			height: 100%;
+			right: 0;
+			position: absolute;
+			top: 0;
+			min-width: 100%;
+			max-width: initial;
+			object-fit: cover;
+		}
+	}
+	&__content{
+		position: relative;
+	}
+
+	&__title{
+		padding: u(30) u(36);
+		padding-bottom: 0;
+		font-family: var(--third-family);
+		font-size: u(48);
+		letter-spacing: 0.01em;
+		text-transform: uppercase;
+		color: var(--belyy) !important;
+		text-decoration: none !important;
+		box-sizing: border-box;
+		display: block;
+		&::after{
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			content: '';
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__img{
+		height: u(293);
+		margin-left: auto;
+		display: block;
+		max-width: 100%;
+	}
+}

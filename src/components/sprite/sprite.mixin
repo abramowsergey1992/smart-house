@@ -1,0 +1,2 @@
+mixin sprite(name)
+	img(src="img/icons/"+name+".svg"  class="icon icon-" + name)&attributes(attributes)
