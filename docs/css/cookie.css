@@ -20,6 +20,7 @@
   font-size: 15px;
   line-height: 124%;
   color: var(--cvet-klientov);
+  margin: 0;
 }
 
 .rs-cookie-disclaimer p a {
