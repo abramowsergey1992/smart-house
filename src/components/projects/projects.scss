@@ -15,6 +15,7 @@
 		background: transparent;
 		border: 0 solid;
 		width: u(57);
+		height: u(57);
 		aspect-ratio: 1/1;
 		padding: 0;
 		margin: 0;
@@ -42,7 +43,9 @@
 		color: var(--cvet-klientov);
 		display: flex;
 		flex-direction: row;
-		
+		@include mobile{
+			gap:0;
+		}
     justify-content: center;
 		.swiper-pagination-bullet-ellipsis,
 		.swiper-pagination-bullet {
