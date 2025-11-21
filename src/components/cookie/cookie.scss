@@ -21,6 +21,9 @@ font-size: 15px;
 line-height: 124%;
 color: var(--cvet-klientov);
 margin: 0;
+@include mobile{
+	font-size: 12px;
+}
 a{
 	text-decoration: underline;
 text-decoration-skip-ink: none;

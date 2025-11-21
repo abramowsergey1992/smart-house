@@ -5,6 +5,7 @@ function setSafeWidth() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('.rs-header');
+    const headerMob = document.querySelector('.rs-header-mob');
     
     if (!header) {
         return;
@@ -17,12 +18,15 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (currentScroll > 100) {
             header.classList.add('_scroll');
+			
+            headerMob.classList.add('_scroll');
         } else {
             header.classList.remove('_scroll');
+            headerMob.classList.remove('_scroll');
         }
         
         if (currentScroll < lastScrollTop) {
-            header.classList.add('_view');
+            header.classList.add('_view');z
         } else {
             header.classList.remove('_view');
         }
@@ -67,7 +71,6 @@ document.querySelector('.rs-header-mob__menu-close').addEventListener('click',()
 document.querySelectorAll('.rs-header-mob-catalog__go').forEach(btn=>{
 	btn.addEventListener('click',()=>{
 		let li = btn.closest('li')
-		console.log('sasdsa',li.closest('_open'))
 		li.closest('._open')?.classList.add('_hidden');
 		li.classList.add('_open')
 	})

@@ -53,3 +53,13 @@
   font-size: calc(32 * var(--width-multiplier));
   line-height: 138%;
 }
+
+@media (max-width: 599px) {
+  .rs-top-front__title {
+    font-size: 108px;
+  }
+
+  .rs-top-front__desc {
+    font-size: 16px;
+  }
+}

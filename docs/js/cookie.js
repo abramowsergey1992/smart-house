@@ -9,8 +9,8 @@ class CookieDisclaimer {
 		/**
 		 * Check if the user has pushed the button
 		 */
-		// if (!window.localStorage.cookieDisclaimerAgree) {
-		if (true) {
+		if (!window.localStorage.cookieDisclaimerAgree) {
+		// if (true) {
 			console.log('xx')
 			this.create();
 		}

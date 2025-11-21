@@ -292,3 +292,23 @@
 		a(href="/").rs-header-mob__feedback.btn
 				+sprite('feedback')
 				span Служба заботы
+
+.mob-fix 
+	ul
+		li 
+			a(href="/").mob-fix__link._active
+				+sprite('home')
+				span Главная
+		li 
+			a(href="/").mob-fix__link
+				+sprite('catalog')
+				span Каталог
+		li 
+			a(href="/").mob-fix__link
+				+sprite('cart')
+				span.mob-fix__counter 21
+				span Корзина
+		li
+			a(href="/").mob-fix__link
+				+sprite('user')
+				span Войти
