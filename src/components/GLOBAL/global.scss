@@ -333,6 +333,9 @@ h1,.h1{
 	font-size: u(70);
 	line-height: 94%;
 	text-transform: uppercase;
+	@include mobile{
+		font-size: 30px;
+	}
 }
 h2,.h2{
 	font-family: var(--third-family);
