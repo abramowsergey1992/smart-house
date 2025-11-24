@@ -35,10 +35,6 @@
   min-height: calc(915 * var(--width-multiplier));
   padding-bottom: calc(148 * var(--width-multiplier));
   padding-top: calc(267 * var(--width-multiplier));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
   position: relative;
   z-index: 2;
 }
@@ -102,6 +98,10 @@
 }
 
 @media (max-width: 900px) {
+  .rs-top-about__inner {
+    min-height: initial;
+  }
+
   .rs-top-about__text.text {
     padding: calc(30 * var(--width-multiplier));
   }

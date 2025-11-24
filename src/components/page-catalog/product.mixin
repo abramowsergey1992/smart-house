@@ -1,0 +1,14 @@
+mixin product()
+	.rs-preview&attributes(attributes)
+		.rs-preview__img-wrap 
+			img(src="img/preview.webp", alt="").rs-preview__img
+			.rs-preview__tag New
+			.rs-preview__sale -29%
+		.rs-preview__price-wrap
+			.rs-preview__price 2 500 ₽
+			.rs-preview__price-old 3 500 ₽
+		.rs-preview__desc
+			p Модуль умной розетки Zigbee для рамки на 16А евростандарта белого цвета для круглого подрозетника, есть шторки и заземление, работает со шлюзом, работает с Алисой
+		a(href="/").btn.rs-preview__link
+			+sprite("cart")
+			span В корзину

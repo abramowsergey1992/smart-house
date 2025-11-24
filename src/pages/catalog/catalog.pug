@@ -1,0 +1,16 @@
+extends ../../layout/layout
+block title
+	title Умный дом
+block content
+	include ../../components/top-catalog/top-catalog
+	include ../../components/page-catalog/page-catalog
+	+productSlider('Вы недавно просматривали')
+
+	.block(data-aos = "fade-up")
+		.block__head 
+			.block__decor(data-x="l" data-y="t" type="1")
+			.block__decor(data-x="r" data-y="b" type="2")
+		.block__body
+			.rs-two-grid 
+				include ../../components/steps/steps
+				include ../../components/consultation/consultation

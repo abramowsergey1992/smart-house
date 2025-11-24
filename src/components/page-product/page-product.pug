@@ -1,0 +1,126 @@
+
+.rs-page-product 
+	ul.rs-breadcrums
+		li
+			a(href="/") Главная 
+		li
+			a(href="/") Каталог 
+		li
+			a(href="/") Розетки 
+		li
+			a(href="/") Встраиваемые
+		li
+			a(href="/") Zigbee 
+		li
+			a(href="/") Модуль умной розетки Zigbee для рамки на 16А евростандар...
+	.rs-page-product__grid
+		.rs-page-product__photos
+
+			.rs-page-product__slider-preview-wrap 
+				.rs-page-product__prev 
+						+sprite('next')
+				.rs-page-product__slider-preview.swiper 
+					
+					.swiper-wrapper 
+						.swiper-slide
+							img(src="img/preview.webp", alt="")
+						.swiper-slide
+							img(src="img/preview.webp", alt="")
+						.swiper-slide
+							img(src="img/preview.webp", alt="")
+						.swiper-slide
+							img(src="img/preview.webp", alt="")
+						.swiper-slide
+							img(src="img/preview.webp", alt="")
+						.swiper-slide
+							img(src="img/preview.webp", alt="")
+						.swiper-slide
+							img(src="img/preview.webp", alt="")
+				.rs-page-product__next 
+					+sprite('next')
+				
+			.rs-page-product__slider-main.swiper 
+				.swiper-wrapper 
+					.swiper-slide
+						img(src="img/preview.webp", alt="")
+					.swiper-slide
+						img(src="img/preview.webp", alt="")
+					.swiper-slide
+						img(src="img/preview.webp", alt="")
+					.swiper-slide
+						img(src="img/preview.webp", alt="")
+					.swiper-slide
+						img(src="img/preview.webp", alt="")
+					.swiper-slide
+						img(src="img/preview.webp", alt="")
+					.swiper-slide
+						img(src="img/preview.webp", alt="")
+		.rs-page-product__content
+			.rs-page-product__config
+				.rs-page-product__title Модуль умной розетки Zigbee для рамки на 16А евростандарта белого цвета для круглого подрозетника, есть шторки и заземление, работает со шлюзом, работает с Алисой
+				.rs-page-product__articul 
+					+sprite('articul')
+					| Артикул: 123654789
+				.rs-page-product__config-item
+					.rs-page-product__config-item-title
+					.rs-page-product__colors
+						label.rs-page-product__color(style="background:#fff")
+							input(type="radio" name="color" checked)
+						label.rs-page-product__color(style="background:#000")
+							input(type="radio" name="color")
+						
+				.rs-page-product__config-item
+					.rs-page-product__config-item-title Цвет:
+					.rs-page-product__checkboxs
+						label.rs-page-product__checkbox
+							input(type="checkbox" name="type[]" checked)
+							| Сенсорная кнопка
+						label.rs-page-product__checkbox
+							input(type="checkbox" name="type[]")
+							| Клавишная кнопка
+						label.rs-page-product__checkbox
+							input(type="checkbox" name="type[]")
+							| С подсветкой
+						label.rs-page-product__checkbox
+							input(type="checkbox" name="type[]")
+							| С таймером
+						label.rs-page-product__checkbox
+							input(type="checkbox" name="type[]")
+							| С таймером
+						label.rs-page-product__checkbox
+							input(type="checkbox" name="type[]")
+							| Голосовое управление
+						
+				.rs-page-product__config-item
+					.rs-page-product__config-item-title Количество клавиш:
+					.rs-page-product__checkboxs
+						label.rs-page-product__checkbox
+							input(type="checkbox" name="type[]" checked)
+							| 1
+						label.rs-page-product__checkbox
+							input(type="checkbox" name="type[]")
+							| 2
+						label.rs-page-product__checkbox
+							input(type="checkbox" name="type[]")
+							| 3
+			div
+				.rs-page-product__cart
+					.rs-page-product__prices
+						.rs-page-product__price 2 500 ₽
+						.rs-page-product__price-old 3 500 ₽
+					.rs-page-product__sale Выгода 29%
+					.rs-page-product__counter
+						button.rs-page-product__sub(type="button")
+							<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M5 11H19V13H5V11Z" fill="#410050"/>
+							</svg>
+
+						input.rs-page-product__count(value="10 000" data-step="1000" readonly)
+						button.rs-page-product__up(type="button")
+							<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z" fill="#410050" />
+							</svg>
+					button.btn 
+						+sprite('cart')
+						span В корзину
+					button.btn-border Купить прямо сейчас

@@ -1,0 +1,34 @@
+@import '../../layout/css/mixin.scss';
+
+.product-slider{
+	&__nav{
+		margin-top: u(40);
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}&__prev,
+	&__next{
+		width: u(44);
+		height: u(44);
+		transition: all 0.4s;
+		border-radius: 50%;
+		img{
+			width: 100%;
+			height: 100%;
+		}
+		&.swiper-button-disabled,
+		&._disabled{
+			pointer-events: none;
+			opacity: 0.4;
+		}
+		&:hover{
+			opacity: 0.8;
+		}
+	}
+	&__prev{
+		img{
+			transform: scale(-1);
+		}
+	}
+}

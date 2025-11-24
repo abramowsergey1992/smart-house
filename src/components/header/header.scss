@@ -384,13 +384,15 @@
 	}
 
 	&__logo {
-		color: #fff;
+		color: var(--osnovnoy);
 		width: 90px;
 		margin-right: auto;
-
+ body:has(.top) &{
+		color: #fff;
+ }
 		.rs-header-mob._scroll & ,
 		.rs-header-mob._open & {
-			color: var(--osnovnoy);
+			color: var(--osnovnoy) !important;
 		}
 	}
 

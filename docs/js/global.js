@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         if (currentScroll < lastScrollTop) {
-            header.classList.add('_view');z
+            header.classList.add('_view');
         } else {
             header.classList.remove('_view');
         }
@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 window.addEventListener('resize', setSafeWidth);
 setSafeWidth();
-
 
 AOS.init({
    once: true

@@ -1,0 +1,10 @@
+extends ../../layout/layout
+block title
+	title Умный дом
+block content
+	include ../../components/page-product/page-product
+	+productSlider('Похожие товары')
+	+productSlider('С этим товаром покупают')
+	+productSlider('Вы недавно просматривали')
+
+	
