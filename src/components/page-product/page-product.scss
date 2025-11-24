@@ -1,7 +1,8 @@
 @import '../../layout/css/mixin.scss';
 body:has(.rs-page-product) .page{
+	@include tablet{
 	padding-top: 65px;
-}
+}}
 
 .rs-page-product {
 	margin-bottom: u(40);
@@ -80,10 +81,13 @@ body:has(.rs-page-product) .page{
 	&__photos {
 		position: relative;
 		padding-left: u(60);
-		max-width: 400px;
 		min-width: 0;
+		@media (max-width:992px){
+
 		margin-left: auto;
 		margin-right: auto;
+		max-width: 400px;
+		}
 	}
 
 	&__slider-main {
