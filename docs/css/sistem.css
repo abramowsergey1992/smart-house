@@ -1,0 +1,111 @@
+.rs-sistem__text-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(40 * var(--width-multiplier));
+  margin-bottom: calc(40 * var(--width-multiplier));
+  text-align: left;
+}
+
+.rs-sistem__text-2 p {
+  text-align: left;
+}
+
+.rs-sistem__text {
+  text-align: left;
+}
+
+.rs-sistem__map {
+  position: relative;
+  max-width: 100%;
+}
+
+.rs-sistem__map-scroll {
+  overflow-x: auto;
+}
+
+.rs-sistem__map-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.rs-sistem__map-img {
+  max-width: 100%;
+  min-width: 700px;
+  border-radius: calc(48 * var(--width-multiplier));
+  overflow: hidden;
+}
+
+.rs-sistem__map-marker-wrap {
+  width: 0;
+  z-index: 3;
+  height: 0;
+  position: absolute;
+}
+
+.rs-sistem__map-popup {
+  position: absolute;
+  min-width: calc(391 * var(--width-multiplier));
+  border-radius: calc(27 * var(--width-multiplier));
+  padding: calc(24 * var(--width-multiplier));
+  box-shadow: -1px 4px 27px 0 rgba(0, 0, 0, 0.2);
+  background: #f6f6f6;
+  pointer-events: none;
+  transform: scale(0);
+  transition: transform 0.3s;
+}
+
+.rs-sistem__map-marker-wrap:has(.rs-sistem__map-marker:hover) .rs-sistem__map-popup {
+  transform: scale(1);
+}
+
+.rs-sistem__map-popup[data-x=l] {
+  left: calc(21 * var(--width-multiplier));
+}
+
+.rs-sistem__map-popup[data-x=r] {
+  right: calc(21 * var(--width-multiplier));
+}
+
+.rs-sistem__map-popup[data-y=b] {
+  top: calc(13 * var(--width-multiplier));
+}
+
+.rs-sistem__map-popup[data-y=t] {
+  bottom: calc(13 * var(--width-multiplier));
+}
+
+.rs-sistem__map-marker {
+  background-color: #d7006f;
+  font-weight: 700;
+  font-size: calc(18 * var(--width-multiplier));
+  line-height: 100%;
+  width: calc(26 * var(--width-multiplier));
+  height: calc(26 * var(--width-multiplier));
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: var(--belyy);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+@media (max-width: 900px) {
+  .rs-sistem__text-2 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .rs-sistem__map-scroll {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 100vw;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

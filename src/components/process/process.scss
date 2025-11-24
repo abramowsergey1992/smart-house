@@ -1,0 +1,98 @@
+@import '../../layout/css/mixin.scss';
+
+.process{
+	background: #f5f5f5;
+	@include br;
+	padding: u(96) u(40);
+	display: grid;
+	gap: u(75)  u(40);
+	overflow: hidden;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	@include tablet{
+		grid-template-columns:  1fr 1fr;
+		padding:u(30);
+		gap: u(30);
+	}
+	@media (max-width: 700px){
+		grid-template-columns: 1fr;
+	}
+	&__item-number{
+		box-shadow: 4px 4px 23px 0 rgba(58, 55, 59, 0.15);
+		width: u(70);
+		height: u(70);
+		border-radius: 50%;
+		display: flex;
+		margin-bottom: u(34);
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		background:  #d7006f;
+		font-family: var(--font-family);
+		font-weight: 600;
+		font-size: u(32);
+		line-height: 148%;
+		position: relative;
+		z-index: 5;
+		text-align: center;
+		color: var(--belyy);
+			@media (max-width: 700px){
+				min-width: u(50);
+				width: u(50);
+				margin-right: u(10);
+		height: u(50);
+		font-size: u(20);
+			}
+		
+	}
+	&__item{
+		position: relative;
+		z-index: 3;
+			@media (max-width: 700px){
+				display: flex;
+				flex-direction: row;
+			}
+		&:nth-child(1){
+	
+		}
+		p{
+			font-family: var(--font-family);
+			font-weight: 600;
+			font-size: u(21);
+			line-height: 148%;
+			color: var(--cvet-klientov);
+		}
+
+		&:nth-child(1){
+			&::after{
+background: #e18db8;
+position: absolute;
+			display: block;
+			content: '';
+			width: 100vw;
+			left:0;
+			height: u(2);
+			top: u(34);
+			@include tablet{
+				display: none;
+			}
+			}	
+			z-index: 2;
+		}
+		
+		&:last-child{
+			&::after{
+background: #e18db8;
+position: absolute;
+			display: block;
+			content: '';
+			width: 100vw;
+			right:100%;
+			height: u(2);@include tablet{
+				display: none;
+			}
+			top: u(34);
+			}	
+			z-index: 2;
+		}
+	}
+}

@@ -1,0 +1,108 @@
+.process {
+  background: #f5f5f5;
+  border-radius: calc(48 * var(--width-multiplier));
+  padding: calc(96 * var(--width-multiplier)) calc(40 * var(--width-multiplier));
+  display: grid;
+  gap: calc(75 * var(--width-multiplier)) calc(40 * var(--width-multiplier));
+  overflow: hidden;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.process__item-number {
+  box-shadow: 4px 4px 23px 0 rgba(58, 55, 59, 0.15);
+  width: calc(70 * var(--width-multiplier));
+  height: calc(70 * var(--width-multiplier));
+  border-radius: 50%;
+  display: flex;
+  margin-bottom: calc(34 * var(--width-multiplier));
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: #d7006f;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: calc(32 * var(--width-multiplier));
+  line-height: 148%;
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  color: var(--belyy);
+}
+
+.process__item {
+  position: relative;
+  z-index: 3;
+}
+
+.process__item p {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: calc(21 * var(--width-multiplier));
+  line-height: 148%;
+  color: var(--cvet-klientov);
+}
+
+.process__item:nth-child(1) {
+  z-index: 2;
+}
+
+.process__item:nth-child(1)::after {
+  background: #e18db8;
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100vw;
+  left: 0;
+  height: calc(2 * var(--width-multiplier));
+  top: calc(34 * var(--width-multiplier));
+}
+
+.process__item:last-child {
+  z-index: 2;
+}
+
+.process__item:last-child::after {
+  background: #e18db8;
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100vw;
+  right: 100%;
+  height: calc(2 * var(--width-multiplier));
+  top: calc(34 * var(--width-multiplier));
+}
+
+@media (max-width: 900px) {
+  .process {
+    grid-template-columns: 1fr 1fr;
+    padding: calc(30 * var(--width-multiplier));
+    gap: calc(30 * var(--width-multiplier));
+  }
+
+  .process__item:nth-child(1)::after {
+    display: none;
+  }
+
+  .process__item:last-child::after {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .process {
+    grid-template-columns: 1fr;
+  }
+
+  .process__item-number {
+    min-width: calc(50 * var(--width-multiplier));
+    width: calc(50 * var(--width-multiplier));
+    margin-right: calc(10 * var(--width-multiplier));
+    height: calc(50 * var(--width-multiplier));
+    font-size: calc(20 * var(--width-multiplier));
+  }
+
+  .process__item {
+    display: flex;
+    flex-direction: row;
+  }
+}

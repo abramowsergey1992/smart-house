@@ -2,16 +2,10 @@ extends ../../layout/layout
 block title
 	title Умный дом
 block content
-	include ../../components/top-front/top-front
-	include ../../components/block-catalog/block-catalog
-	include ../../components/block-about/block-about
-	include ../../components/advantage/advantage
+	include ../../components/top-smart/top-smart
+	include ../../components/sistem/sistem
 	include ../../components/projects/projects
-	.block(data-aos = "fade-up")
-		.block__body
-			.rs-two-grid 
-				include ../../components/marketplace/marketplace
-				include ../../components/why-buy/why-buy
+	include ../../components/process/process
 	.block(data-aos = "fade-up")
 		.block__head 
 			.block__decor(data-x="l" data-y="t" type="2")
