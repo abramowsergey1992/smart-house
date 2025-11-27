@@ -1,0 +1,120 @@
+.rs-faqs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: calc(24 * var(--width-multiplier)) calc(40 * var(--width-multiplier));
+  --h2: 0;
+}
+
+.block:has(.rs-faq) {
+  position: relative;
+  z-index: 10;
+}
+
+.rs-faq {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+.rs-faq:hover,
+.rs-faq._open {
+  z-index: 10;
+}
+
+.rs-faq::before {
+  display: block;
+  content: "";
+  background: #f5f5f5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: calc(48 * var(--width-multiplier));
+  width: 100%;
+  transition: box-shadow 0.5s, height 0.5s;
+  height: calc(var(--h));
+}
+
+.rs-faq._open::before {
+  box-shadow: 9px 9px 20px 0px rgba(0, 0, 0, 0.168627451);
+}
+
+.rs-faq__head {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: calc(48 * var(--width-multiplier));
+  cursor: pointer;
+  height: calc(104 * var(--width-multiplier));
+  padding: calc(28 * var(--width-multiplier)) calc(40 * var(--width-multiplier));
+  padding-right: calc(95 * var(--width-multiplier));
+  position: relative;
+  background: #f5f5f5;
+}
+
+.rs-faq__toggle {
+  width: calc(48 * var(--width-multiplier));
+  height: calc(48 * var(--width-multiplier));
+  position: absolute;
+  right: calc(40 * var(--width-multiplier));
+  top: 50%;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.rs-faq__toggle::before {
+  content: "";
+  display: block;
+  width: calc(35 * var(--width-multiplier));
+  height: 1px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  background: var(--cvet-klientov);
+}
+
+.rs-faq__toggle::after {
+  content: "";
+  display: block;
+  height: calc(35 * var(--width-multiplier));
+  width: 1px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transition: height 0.3s;
+  transform: translateY(-50%) translateX(-50%);
+  background: var(--cvet-klientov);
+}
+
+.rs-faq._open .rs-faq__toggle::after {
+  height: 1px;
+}
+
+.rs-faq__title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: calc(21 * var(--width-multiplier));
+  line-height: 148%;
+  color: var(--cvet-klientov);
+}
+
+.rs-faq__body-wrap {
+  max-height: var(--h2);
+  transition: max-height 0.5s;
+  top: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+
+.rs-faq__body {
+  padding: calc(40 * var(--width-multiplier));
+  padding-top: 0;
+}
+
+@media (max-width: 900px) {
+  .rs-faqs {
+    grid-template-columns: 1fr;
+    gap: calc(30 * var(--width-multiplier));
+  }
+}
